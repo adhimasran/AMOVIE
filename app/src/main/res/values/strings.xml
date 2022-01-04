@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AMOVIA</string>
+    <string name="movie">Movie</string>
+    <string name="tv_show">TV Show</string>
+    <string name="categories">Categories</string>
+    <string name="detail">Detail</string>
+
+    <string name="title">Title</string>
+    <string name="img_poster">image poster</string>
+    <string name="release">Dec 12, 2021</string>
+    <string name="number">9</string>
+    <string name="duration">Duration: 1h 1m</string>
+    <string name="overview">Overview</string>
+</resources>
