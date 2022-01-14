@@ -1,10 +1,10 @@
-package com.adhi.amovia.ui.movie
+package com.adhi.amovia.ui.tv
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import com.adhi.amovia.data.source.FilmRepository
-import com.adhi.amovia.data.source.local.entity.MovieEntity
+import com.adhi.amovia.data.source.local.entity.TvEntity
 import com.adhi.amovia.utils.DataDummy
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
@@ -18,8 +18,8 @@ import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnitRunner
 
 @RunWith(MockitoJUnitRunner::class)
-class MovieViewModelTest {
-    private lateinit var viewModel: MovieViewModel
+class TvShowViewModelTest {
+    private lateinit var viewModel: TvShowViewModel
 
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
@@ -28,26 +28,26 @@ class MovieViewModelTest {
     private lateinit var repo: FilmRepository
 
     @Mock
-    private lateinit var observer: Observer<List<MovieEntity>>
+    private lateinit var observer: Observer<List<TvEntity>>
 
     @Before
     fun setUp() {
-        viewModel = MovieViewModel(repo)
+        viewModel = TvShowViewModel(repo)
     }
 
     @Test
-    fun getMovies() {
-        val dummyMovies = DataDummy.dummyMovies()
-        val data = MutableLiveData<List<MovieEntity>>()
-        data.value = dummyMovies
+    fun getTvShow() {
+        val dummyTvShows = DataDummy.dummyTvShows()
+        val data = MutableLiveData<List<TvEntity>>()
+        data.value = dummyTvShows
 
-        `when`(repo.getMovies()).thenReturn(data)
-        val movies = viewModel.getMovies().value
-        verify(repo).getMovies()
-        assertNotNull(movies)
-        assertEquals(6, movies?.size)
+        `when`(repo.getTvShows()).thenReturn(data)
+        val tvShows = viewModel.getTvShows().value
+        verify(repo).getTvShows()
+        assertNotNull(tvShows)
+        assertEquals(6, tvShows?.size)
 
-        viewModel.getMovies().observeForever(observer)
-        verify(observer).onChanged(dummyMovies)
+        viewModel.getTvShows().observeForever(observer)
+        verify(observer).onChanged(dummyTvShows)
     }
 }

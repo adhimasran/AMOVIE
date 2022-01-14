@@ -33,7 +33,7 @@ class HomeActivity : AppCompatActivity() {
 
     companion object {
         @StringRes
-        private val TAB_TITLES = intArrayOf(
+        val TAB_TITLES = intArrayOf(
             R.string.movie,
             R.string.tv_show
         )

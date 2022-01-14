@@ -1,13 +1,15 @@
 - Menggulir view pager
-	- menggulir view pager ke kanan
-	- menggulir view pager ke kiri
+	* menggulir view pager ke kanan
+	* menggulir view pager ke kiri
 - Menampilkan data Movies
 	* Memastikan rv_movies dalam keadaan tampil.
 	* Gulir rv_movies ke posisi data terakhir.
 - Menampilkan data detail movie
 	* Memberi tindakan klik pada data pertama di rv_movies.
 	* Memastikan TextView untuk title tampil sesuai dengan yang diharapkan.
+	* Memastikan TextView untuk tagline tampil sesuai dengan yang diharpkan.
 	* Memastikan TextView untuk rating tampil sesuai dengan yang diharpkan.
+	* Memastikan TextView untuk ratingCount tampil sesuai dengan yang diharpkan.
 	* Memastikan TextView untuk release tampil sesuai dengan yang diharapkan.
 	* Memastikan TextView untuk duration tampil sesuai dengna yang diharapkan.
 	* Memastikan TextView untuk overview tampil sesuai dengan yang diharapkan.
@@ -17,7 +19,9 @@
 - Menampilkan data detail tv show
 	* Memberi tindakan klik pada data pertama di rv_tv_show.
 	* Memastikan TextView untuk title tampil sesuai dengan yang diharapkan.
+	* Memastikan TextView untuk tagline tampil sesuai dengan yang diharpkan.
 	* Memastikan TextView untuk rating tampil sesuai dengan yang diharpkan.
+	* Memastikan TextView untuk ratingCount tampil sesuai dengan yang diharpkan.
 	* Memastikan TextView untuk release tampil sesuai dengan yang diharapkan.
 	* Memastikan TextView untuk duration tampil sesuai dengna yang diharapkan.
 	* Memastikan TextView untuk overview tampil sesuai dengan yang diharapkan.

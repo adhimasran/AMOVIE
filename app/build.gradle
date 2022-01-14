@@ -8,11 +8,14 @@ android {
 
     defaultConfig {
         applicationId "com.adhi.amovia"
-        minSdk 21
+        minSdk 26
         targetSdk 31
         versionCode 1
         versionName "1.0"
 
+        buildConfigField 'String', "KEY", '"0d4b78bb6bad5c2940ac90e7b496e8a5"'
+        buildConfigField 'String', "BaseImageUrl" , '"https://image.tmdb.org/t/p/w500"'
+        buildConfigField 'String', "BaseUrl" , '"https://api.themoviedb.org/3/"'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -46,12 +49,23 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
     implementation "androidx.activity:activity-ktx:$activityKtxVersion"
     implementation "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
+    implementation "com.facebook.shimmer:shimmer:$shimmerVersion"
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$gsonVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptorVersion"
+    implementation "androidx.test.espresso:espresso-idling-resource:$idlingVersion"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
 
     testImplementation "junit:junit:$junitVersion"
+    testImplementation "androidx.arch.core:core-testing:$archCoreVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
     androidTestImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test:runner:$androidTestVersion"
     androidTestImplementation "androidx.test:rules:$androidTestVersion"
-    testImplementation "androidx.arch.core:core-testing:$archCoreVersion"
     androidTestImplementation "androidx.test.ext:junit:$junitExtversion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
